@@ -6,7 +6,7 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-sgMail.setApiKey('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');
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
